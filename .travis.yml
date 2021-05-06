@@ -5,3 +5,6 @@ before_install:
   - docker build -f Dockerfile.dev -t test .
 script:
   - docker run -e CI=true test npm run test -- --coverage
+branches:
+  only:
+    - master
